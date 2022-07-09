@@ -1,4 +1,5 @@
 var quoteDiv = document.querySelector("#quote"); 
+var imageDiv = document.querySelector("#image"); 
 
 // Get Kanye API 
 function getApi() {
@@ -15,3 +16,20 @@ function getApi() {
       });
   }
   getApi();
+
+  function getImage() {
+    var requestUrl = 'https://picsum.photos/200/300'; 
+
+    fetch(requestUrl)
+    .then(function (response) {
+      console.log(response.url); 
+      return response.blob();
+    })
+    .then(function (data){
+      console.log(data); 
+
+      imageDiv.src = URL.createObjectURL(data); 
+
+    }); 
+  }
+  getImage(); 
