@@ -6,46 +6,52 @@ var useFilter = true; //temporary variable; will use a checkbox/button/etc in fi
 var tempQuote = "This is the quote we are going to use for testing purposes!";
 console.log('Checking for filter on/off');
 
-// Get Kanye API 
-function getApi() {
-    // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'https://api.kanye.rest/';
+// generate button 
+var generatePoster; 
+var generateBtn = document.querySelector(".button"); 
+
+generatePoster = generateBtn.addEventListener('click', function() {
+  // Get Kanye API 
+  function getApi() {
+      // fetch request gets a list of all the repos for the node.js organization
+      var requestUrl = 'https://api.kanye.rest/';
+    
+      fetch(requestUrl)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data.quote)
+          tempQuote = data.quote;
+  
+          //adding in the filter check here
+          if(useFilter){
+            console.log('Filter is turned on. Initiating filter');
+            quoteFilter(tempQuote);
+          }
+  
+          quoteDiv.textContent = data.quote           
+        });
+  }
+    getApi();
+  
+  function getImage() {
+    var requestUrl = 'https://picsum.photos/600/450';
   
     fetch(requestUrl)
       .then(function (response) {
-        return response.json();
+        console.log(response.url);
+        return response.blob();
       })
       .then(function (data) {
-        console.log(data.quote)
-        tempQuote = data.quote;
-
-        //adding in the filter check here
-        if(useFilter){
-          console.log('Filter is turned on. Initiating filter');
-          quoteFilter(tempQuote);
-        }
-
-        quoteDiv.textContent = data.quote           
-      });
-}
-  getApi();
-
-function getImage() {
-  var requestUrl = 'https://picsum.photos/600/450';
-
-  fetch(requestUrl)
-    .then(function (response) {
-      console.log(response.url);
-      return response.blob();
-    })
-    .then(function (data) {
-      console.log(data);
-
-      imageDiv.src = URL.createObjectURL(data);
-
-    }); 
-  }
-  getImage(); 
+        console.log(data);
+  
+        imageDiv.src = URL.createObjectURL(data);
+  
+      }); 
+    }
+    getImage(); 
+})
 
   //code for the filter
   function quoteFilter(quote){
