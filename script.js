@@ -18,7 +18,7 @@ function getApi() {
 getApi();
 
 function getImage() {
-  var requestUrl = 'https://picsum.photos/200/300';
+  var requestUrl = 'https://picsum.photos/600/450';
 
   fetch(requestUrl)
     .then(function (response) {
