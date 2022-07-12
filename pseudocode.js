@@ -20,9 +20,17 @@
 // b. We need a way to store that input from the user
 // c. We then need to call on that stored input and see if it indicates that we do or do not use the filter
 // d. If yes, we use filter. Otherwise we do not
+var useFilter = false; //temporary variable; will use a checkbox/button/etc in final product
+
+if(useFilter){
+    quoteFilter();
+}
 
 // 2. Get quote from API
 // a. This will be taken care of by the current script in place. We just need to store it somewhere
+
+//creating temp quote variable
+var tempQuote = "This is the quote we are going to use for testing purposes!";
 
 // 3. Compare words in quote to our filter
 // a. First, we need to make sure we have a filter
@@ -30,8 +38,25 @@
 // c. If at any point we do find a match, flag it and mark this quote "bad"
 // d. If bad quote, go to next step. Otherwise, carry on (step 5)
 
+//creating the filter inside the quoteFilter function
+function quoteFilter(){
+    var wordFilter = ["big", "bad", "words"];
+    var isGood = true; //boolean to see if quote is good or bad
+
+    //making a loop to compare our quote to the filter
+    for(let i = 0; i < wordFilter.length; i++){
+        if(tempQuote.includes(wordFilter[i])){
+            console.log(wordFilter[i]);
+            isGood = false;
+            console.log(isGood);
+        }
+    }
+
 // 4. If there ARE words that match the filter, get a new quote
 // a. This can be taken care of the API from step 2. We just need to point back there
 
 // 5. If there ARE NO words that match filter, carry on as normal
 // a. If we get to this step, no more steps necessary
+}
+
+
