@@ -17,7 +17,15 @@ function getApi() {
       })
       .then(function (data) {
         console.log(data.quote)
-        quoteDiv.textContent = data.quote
+        tempQuote = data.quote;
+
+        //adding in the filter check here
+        if(useFilter){
+          console.log('Filter is turned on. Initiating filter');
+          quoteFilter(tempQuote);
+        }
+
+        quoteDiv.textContent = data.quote           
       });
   }
   getApi();
@@ -39,9 +47,10 @@ function getApi() {
   }
   getImage(); 
 
+  //code for the filter
   function quoteFilter(quote){
     console.log(quote);
-    var wordFilter = ["big", "bad", "words"];
+    var wordFilter = ["big", "bad", "words", "the"];
     var isGood = true; //boolean to see if quote is good or bad
 
     //making a loop to compare our quote to the filter
@@ -55,9 +64,7 @@ function getApi() {
 
     if(isGood){
         console.log('All clear!');
+    } else{
+      getApi();
     }
-
-// 4. If there ARE words that match the filter, get a new quote
-
-// 5. If there ARE NO words that match filter, carry on as normal
 }
