@@ -1,0 +1,29 @@
+.poster {
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    border: 2px solid white;
+    max-width: 640px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image {
+    border: 2px solid white;
+    padding: 5px;
+}
+
+.title {
+    text-decoration: underline;
+    font-size: 64px;
+    padding: 0;
+    margin: 0;
+}
+
+.quote {
+    padding: 0;
+    margin: 5px;
+    font-style: italic;
+}
