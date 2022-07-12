@@ -27,21 +27,21 @@ function getApi() {
 
         quoteDiv.textContent = data.quote           
       });
-  }
+}
   getApi();
 
-  function getImage() {
-    var requestUrl = 'https://picsum.photos/200/300'; 
+function getImage() {
+  var requestUrl = 'https://picsum.photos/600/450';
 
-    fetch(requestUrl)
+  fetch(requestUrl)
     .then(function (response) {
-      console.log(response.url); 
+      console.log(response.url);
       return response.blob();
     })
-    .then(function (data){
-      console.log(data); 
+    .then(function (data) {
+      console.log(data);
 
-      imageDiv.src = URL.createObjectURL(data); 
+      imageDiv.src = URL.createObjectURL(data);
 
     }); 
   }
