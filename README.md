@@ -17,7 +17,7 @@
 - Gwanju Chung [https://github.com/thegwanj] Profanity filter
 - Jesenia Lundeen [https://github.com/lundeej] Scripting
 - Colin Plancich [https://github.com/cplancich] Idea, design
-- Murl Trainham Jr. [https://github.com/multrainham] HTML, BULMA
+- Murl Trainham Jr. [https://github.com/multrainham] HTML, Bulma Framework
 - Maxwell Turner [https://github.com/Maxt992] Documentation
 ​
 ## Deployed Page
@@ -42,7 +42,7 @@ Simply enter an adjective or descriptive word below, and a motivational poster d
 ​
 ## Preview Image
 
-​![placeholder](../motivationPoster/assets/images/Kanyetest.PNG)
+​![placeholder](../motivationPoster/assets/images/Preview.png)
 
 ## Contact
 ​--------@abc.com <br>
