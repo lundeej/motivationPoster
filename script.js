@@ -4,7 +4,7 @@ var useFilter = true; //temporary variable; will use a checkbox/button/etc in fi
 
 //creating temp quote variable
 var tempQuote = "This is the quote we are going to use for testing purposes!";
-console.log('checking for filter on/off');
+console.log('Checking for filter on/off');
 
 // Get Kanye API 
 function getApi() {
@@ -49,8 +49,7 @@ function getApi() {
 
   //code for the filter
   function quoteFilter(quote){
-    console.log(quote);
-    var wordFilter = ["big", "bad", "words", "the"];
+    var wordFilter = ["big", "bad", "words"];
     var isGood = true; //boolean to see if quote is good or bad
 
     //making a loop to compare our quote to the filter
