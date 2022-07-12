@@ -14,11 +14,11 @@
 ​
 ![Ye ASCII](../motivationPoster/assets/images/Ye.png)
 ## Team
-- Gwanju Chung [https://github.com/thegwanj]
-- Jesenia Lundeen [https://github.com/lundeej]
-- Colin Plancich [https://github.com/cplancich]
-- Murl Trainham Jr. [https://github.com/multrainham]
-- Maxwell Turner [https://github.com/Maxt992]
+- Gwanju Chung [https://github.com/thegwanj] Profanity filter
+- Jesenia Lundeen [https://github.com/lundeej] Scripting
+- Colin Plancich [https://github.com/cplancich] Idea, design
+- Murl Trainham Jr. [https://github.com/multrainham] HTML, BULMA
+- Maxwell Turner [https://github.com/Maxt992] Documentation
 ​
 ## Deployed Page
 ​
