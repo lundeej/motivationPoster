@@ -12,7 +12,7 @@ function getApi() {
     })
     .then(function (data) {
       console.log(data.quote)
-      quoteDiv.textContent = data.quote
+      quoteDiv.textContent = '"' + data.quote + '"';
     });
 }
 getApi();
