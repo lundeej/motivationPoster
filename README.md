@@ -53,3 +53,5 @@ maxt992@gmail.com <br>
 
 ## CREDITS
 - Kanye West
+- Andrew Jazbec [https://kanye.rest/]
+- David Marby & Nijiko Yonskai [https://picsum.photos/]
