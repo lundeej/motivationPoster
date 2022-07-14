@@ -30,7 +30,28 @@
             </div>
     </section>
     <br>
-    <section class="container" id="photocontainer">
+    
+    <textarea class="title" cols="30" rows="10"></textarea>
+    <button class="modalTrigger" data-target="modalActivate">Generate Image</button>
+    
+    <section>
+        <div class="poster">
+            <div id="modalActivate" class="modal">
+                <div class="modal-background"> </div>
+                <div class="modal-content">
+                    <p class="image is-4by3">
+                        <img id="image">
+                        <section class="modal-card-body">
+                            <h2 class="poster-title">Hi</h2>
+                            <h3 class="quote is-1" id="quote"></h3>
+                        </section>
+                    </p>
+                </div>
+                <button class="modal-close is-large" aria-label="close">Close</button>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="container" id="photocontainer">
         <div class="box has-background-black">
             <figure class="image ratio">
                 <img id="image"></img>
@@ -49,7 +70,7 @@
                     </div>
                 </div>
             </div>
-    </section>
+    </section> -->
     <script src="./script.js"></script>
 </body>
 
