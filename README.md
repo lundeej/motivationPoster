@@ -1,6 +1,6 @@
 # Ultimate Kanye Motivation
 
-------
+
 
 
   ## Table of Contents
