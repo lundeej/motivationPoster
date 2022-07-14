@@ -4,18 +4,17 @@
     text-align: center;
     align-items: center;
     padding: 50px;
-    border: 2px solid white;
     max-width: 640px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .image {
-    border: 2px solid white;
+    border: 5px solid white;
     padding: 5px;
 }
 
-.poster-title {
+#poster-title {
     text-decoration: underline;
     font-size: 64px;
     padding: 0;
@@ -41,6 +40,10 @@
     background-color: black;
 }
 
-.title {
+#form-input {
+    text-align: center;
+}
 
+.hide {
+    display: none;
 }

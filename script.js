@@ -11,6 +11,8 @@ var generatePoster;
 var generateBtn = document.querySelector(".modalTrigger"); 
 
 generatePoster = generateBtn.addEventListener('click', function() {
+  document.querySelector(".poster").classList.remove("hide"); 
+
   // Get Kanye API 
   function getApi() {
       // fetch request gets a list of all the repos for the node.js organization
@@ -107,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $close.addEventListener('click', () => {
       closeModal($target);
+      document.querySelector(".poster").classList.add("hide"); 
     });
   });
 
@@ -121,6 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function returnText(){
+  var titleEl = document.getElementById("title").value; 
+  console.log(titleEl);
+
+  var posterTitleEl = document.getElementById("poster-title"); 
+  posterTitleEl.innerHTML = titleEl; 
   
 }
 
