@@ -40,7 +40,7 @@
 
   ## Preview Image
   ![Deployed Preview](https://media.giphy.com/media/7PcmcEbWdB4gcxPYhQ/giphy.gif)
-  ![SilverYeezy](./assets/images/silverYeezy.jpg)
+  ![SilverYeezy](./assets/images/silverYeezy.jpg width="200")
 
   ## Contact
 
