@@ -40,7 +40,7 @@
 
   ## Preview Image
   ![Deployed Preview](https://media.giphy.com/media/7PcmcEbWdB4gcxPYhQ/giphy.gif)
-  ![SilverYeezy](./assets/images/silverYeezy.jpg width="200")
+  ![SilverYeezy]<img src="/lundeej/motivationPoster/blob/main/assets/images/silverYeezy.jpg" alt="That Yeezy Glow" style="height: 200px; width:200px;"/>
 
   ## Contact
 
