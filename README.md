@@ -39,7 +39,7 @@
   Simply enter an adjective or descriptive word below, and a motivational poster design will be instantly generated using randomly selected contemplative photographs and a real quote from Kanye West himself.
 
   ## Preview Image
-  ![Deployed Preview]<iframe src="https://giphy.com/embed/7PcmcEbWdB4gcxPYhQ" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  ![Deployed Preview]<img src="https://giphy.com/embed/7PcmcEbWdB4gcxPYhQ" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen />
   ![SilverYeezy](./assets/images/silverYeezy.jpg)
 
   ## Contact
