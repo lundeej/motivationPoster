@@ -127,9 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-var titleEl = document.getElementById("title").value; 
+var titleEl;
 
 var returnText = function(){
+  
+  titleEl = document.getElementById("title").value; 
 
   var posterTitleEl = document.getElementById("poster-title"); 
   posterTitleEl.innerHTML = titleEl;  
