@@ -47,3 +47,13 @@
 .hide {
     display: none;
 }
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main-div {
+    border: 2px solid white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
