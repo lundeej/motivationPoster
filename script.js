@@ -57,7 +57,7 @@ generatePoster = generateBtn.addEventListener('click', function() {
     getImage(); 
 
     returnText(); 
-})
+}); 
 
   //code for the filter
   function quoteFilter(quote){
@@ -127,24 +127,53 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-var titleEl = document.getElementById("title").value; 
+var titleEl; 
 
 var returnText = function(){
+  
+  titleEl = document.getElementById("title").value; 
 
   var posterTitleEl = document.getElementById("poster-title"); 
   posterTitleEl.innerHTML = titleEl;  
 }
 
-//save to local storage 
-function savePoster(){
-  generatePoster; 
+var savedPosters = []; 
 
-  const poster = {
+//save to local storage 
+function savePosters(){
+
+  var poster = {
     quote: (quote), 
     image: (image), 
     title: (titleEl), 
-  }
-  console.log("yes"); 
-  
-  var posterSaved = window.localStorage.setItem('poster', JSON.stringify(poster)); 
+  }; 
+
+  console.log(savedPosters); 
+  savedPosters.push(poster); 
+  console.log(savedPosters); 
+
+  localStorage.setItem("local-Posters", JSON.stringify(savedPosters))
 }
+
+// var savedPostersDiv = document.getElementById('savedPosters'); 
+
+// // display savedPosters 
+// for(var i = savePosters; i <= savePosters.length; i++){
+  
+//   var template = `
+//   <div class="poster hide">
+//     <p class="image is-4by3">
+//         <img id="image">
+//     <section class="modal-card-body">
+//          <h2 id="poster-title"></h2>
+//           <h3 class="quote is-1" id="quote"></h3>
+//               </section>
+//           </p>
+//   </div>
+//   `;
+
+//   var savedImage = localStorage.getItem("image"); 
+//   console.log(savedImage); 
+  
+//   savedPostersDiv.innerHTML += template; 
+// }
