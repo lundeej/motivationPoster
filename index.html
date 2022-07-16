@@ -30,23 +30,28 @@
     </section>
     <br>
     
-    <textarea class="title" cols="30" rows="10"></textarea>
-    <button class="modalTrigger" data-target="modalActivate">Generate Image</button>
+    <div id="form-input">
+        <input id="title" type="text"/>
+        <button onclick="returnText()" class="modalTrigger" data-target="modalActivate">Generate Image</button>
+    </div>
     
     <section>
-        <div class="poster">
+        <div class="poster hide">
             <div id="modalActivate" class="modal">
                 <div class="modal-background"> </div>
                 <div class="modal-content">
                     <p class="image is-4by3">
                         <img id="image">
                         <section class="modal-card-body">
-                            <h2 class="poster-title">Hi</h2>
+                            <h2 id="poster-title"></h2>
                             <h3 class="quote is-1" id="quote"></h3>
                         </section>
                     </p>
                 </div>
                 <button class="modal-close is-large" aria-label="close">Close</button>
+                <footer class="modal-card-foot">
+                    <button onclick="savePoster()" class="saveButton is-success">Save</button>
+                  </footer>
             </div>
         </div>
     </section>
