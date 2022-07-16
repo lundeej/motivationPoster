@@ -3,14 +3,17 @@ var imageDiv = document.querySelector("#image");
 var useFilter = true; //temporary variable; will use a checkbox/button/etc in final product
 
 //creating temp quote variable
-var tempQuote = "This is the quote we are going to use for testing purposes!";
+var quote;
 console.log('Checking for filter on/off');
 
 // generate button 
 var generatePoster; 
 var generateBtn = document.querySelector(".modalTrigger"); 
+var image; 
 
 generatePoster = generateBtn.addEventListener('click', function() {
+  document.querySelector(".poster").classList.remove("hide"); 
+
   // Get Kanye API 
   function getApi() {
       // fetch request gets a list of all the repos for the node.js organization
@@ -22,15 +25,15 @@ generatePoster = generateBtn.addEventListener('click', function() {
         })
         .then(function (data) {
           console.log(data.quote)
-          tempQuote = data.quote;
+          quote = data.quote;
   
           //adding in the filter check here
           if(useFilter){
             console.log('Filter is turned on. Initiating filter');
-            quoteFilter(tempQuote);
+            quoteFilter(quote);
           }
   
-          quoteDiv.textContent = '"' + data.quote + '" - Kanye West'           
+          quoteDiv.textContent = '"' + quote + '" - Kanye West'           
         });
   }
     getApi();
@@ -40,17 +43,20 @@ generatePoster = generateBtn.addEventListener('click', function() {
   
     fetch(requestUrl)
       .then(function (response) {
-        console.log(response.url);
+      
+        image = response.url; 
+
         return response.blob();
       })
       .then(function (data) {
-        console.log(data);
   
         imageDiv.src = URL.createObjectURL(data);
   
       }); 
     }
     getImage(); 
+
+    returnText(); 
 })
 
   //code for the filter
@@ -107,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $close.addEventListener('click', () => {
       closeModal($target);
+      document.querySelector(".poster").classList.add("hide"); 
     });
   });
 
@@ -120,7 +127,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function returnText(){
+var titleEl;
+
+var returnText = function(){
   
+  titleEl = document.getElementById("title").value; 
+
+  var posterTitleEl = document.getElementById("poster-title"); 
+  posterTitleEl.innerHTML = titleEl;  
 }
 
+//save to local storage 
+function savePoster(){
+  generatePoster; 
+
+  const poster = {
+    quote: (quote), 
+    image: (image), 
+    title: (titleEl), 
+  }
+  console.log("yes"); 
+  
+  var posterSaved = window.localStorage.setItem('poster', JSON.stringify(poster)); 
+}
