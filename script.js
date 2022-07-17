@@ -24,7 +24,7 @@ generatePoster = generateBtn.addEventListener('click', function() {
           return response.json();
         })
         .then(function (data) {
-          console.log(data.quote)
+          // console.log(data.quote)
           quote = data.quote;
   
           //adding in the filter check here
@@ -148,32 +148,7 @@ function savePosters(){
     title: (titleEl), 
   }; 
 
-  console.log(savedPosters); 
   savedPosters.push(poster); 
-  console.log(savedPosters); 
 
   localStorage.setItem("local-Posters", JSON.stringify(savedPosters))
 }
-
-// var savedPostersDiv = document.getElementById('savedPosters'); 
-
-// // display savedPosters 
-// for(var i = savePosters; i <= savePosters.length; i++){
-  
-//   var template = `
-//   <div class="poster hide">
-//     <p class="image is-4by3">
-//         <img id="image">
-//     <section class="modal-card-body">
-//          <h2 id="poster-title"></h2>
-//           <h3 class="quote is-1" id="quote"></h3>
-//               </section>
-//           </p>
-//   </div>
-//   `;
-
-//   var savedImage = localStorage.getItem("image"); 
-//   console.log(savedImage); 
-  
-//   savedPostersDiv.innerHTML += template; 
-// }
