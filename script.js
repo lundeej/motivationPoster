@@ -1,6 +1,7 @@
 var quoteDiv = document.querySelector("#quote"); 
 var imageDiv = document.querySelector("#image"); 
 var useFilter = true; //temporary variable; will use a checkbox/button/etc in final product
+var filterLevel = 2; //default value of the filter level (0 = no filter, 1 = some filter, 2 = full filter)
 
 //creating temp quote variable
 var quote;
@@ -26,7 +27,8 @@ generatePoster = generateBtn.addEventListener('click', function() {
         .then(function (data) {
           // console.log(data.quote)
           quote = data.quote;
-  
+          console.log(quote);
+          
           //adding in the filter check here
           if(useFilter){
             console.log('Filter is turned on. Initiating filter');
@@ -61,11 +63,20 @@ generatePoster = generateBtn.addEventListener('click', function() {
 
   //code for the filter
   function quoteFilter(quote){
-    var wordFilter = ["big", "bad", "words"];
+    var wordFilter = ['']; //is empty by default
     var isGood = true; //boolean to see if quote is good or bad
 
-    //making a loop to compare our quote to the filter
-    for(let i = 0; i < wordFilter.length; i++){
+    //checking to see what level of filtering to use
+    if(filterLevel === 1){ //some filter
+      wordFilter = ['shit', 'fuck', 'cunt', 'motherfucker'];
+    } else if(filterLevel === 2){ //full filter
+      wordFilter = ['shit', 'piss', 'fuck', 'cunt', 'cocksucker', 'motherfucker', 'tits', 'porn'];
+    }
+    console.log(wordFilter.length);
+
+    //making a loop to compare our quote to the filter IF filter level is above 1
+    if(filterLevel > 0){
+      for(let i = 0; i < wordFilter.length; i++){
         if(quote.toLowerCase().includes(wordFilter[i].toLowerCase())){
             console.log(wordFilter[i]);
             isGood = false;
@@ -73,9 +84,12 @@ generatePoster = generateBtn.addEventListener('click', function() {
         }
     }
 
+    }
+
     if(isGood){
-        console.log('All clear!');
+      console.log('All clear!');
     } else{
+      console.log('Quote caught in filter. Grabbing new quote');
       getApi();
     }
 }
