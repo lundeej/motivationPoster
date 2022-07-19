@@ -104,6 +104,10 @@ function quoteFilter(quote){
                 //     <label for="xxl">XXL</label>
                 // </div>
 
+// Levels of filtering
+//  - "Family friendly": All the swears (based off the "seven words you can never say on tv")
+//  - "Moderate": Some of the swears
+//  - "None": None of the swears - the default
 
 // Ideas on how to remove:
 //  - Checkbox (just unchecking from above)
