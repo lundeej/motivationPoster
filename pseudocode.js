@@ -108,6 +108,10 @@ function quoteFilter(quote){
 //  - "Family friendly": All the swears (based off the "seven words you can never say on tv")
 //  - "Moderate": Some of the swears
 //  - "None": None of the swears - the default
+// How to implement the levels
+// a. Have an empty variable (default level) that we can put our "bad words" in
+// b. Get the level of filtering the user wants
+// c. Depending on the level selected, add in the words that the user wants censored
 
 // Ideas on how to remove:
 //  - Checkbox (just unchecking from above)
