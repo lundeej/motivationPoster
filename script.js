@@ -127,7 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
 var titleEl; 
+
 
 var returnText = function(){
   
