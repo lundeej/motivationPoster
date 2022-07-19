@@ -74,6 +74,36 @@ function quoteFilter(quote){
 //  - Textbox
 //  - Checkbox
 //      - Premade groups (Age rating filter)
+//  - Radio buttons
+//      - Can getElementById and test for true or false
+//          - HTML would be something like the following (using shirt sizes for example):
+// 
+                //<p>Select your size:</p>
+                // <div>
+                // <input type="radio" name="size" value="XS" id="xs">
+                // <label for="xs">XS</label>
+                // </div>
+                // <div>
+                //     <input type="radio" name="size" value="S" id="s">
+                //     <label for="s">S</label>
+                // </div>
+                // <div>
+                //     <input type="radio" name="size" value="M" id="m">
+                //     <label for="m">M</label>
+                // </div>
+                // <div>
+                //     <input type="radio" name="size" value="L" id="l">
+                //     <label for="l">L</label>
+                // </div>
+                // <div>
+                //     <input type="radio" name="size" value="XL" id="xl">
+                //     <label for="xl">XL</label>
+                // </div>
+                // <div>
+                //     <input type="radio" name="size" value="XXL" id="xxl">
+                //     <label for="xxl">XXL</label>
+                // </div>
+
 
 // Ideas on how to remove:
 //  - Checkbox (just unchecking from above)
