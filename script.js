@@ -1,7 +1,7 @@
 var quoteDiv = document.querySelector("#quote"); 
 var imageDiv = document.querySelector("#image"); 
 var useFilter = true; //temporary variable; will use a checkbox/button/etc in final product
-var filterLevel = 2; //default value of the filter level (0 = no filter, 1 = some filter, 2 = full filter)
+var filterLevel = 0; //default value of the filter level (0 = no filter, 1 = some filter, 2 = full filter)
 
 //creating temp quote variable
 var quote;
