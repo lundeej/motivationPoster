@@ -32,7 +32,8 @@
     
     <div id="form-input">
         <input id="title" type="text"/>
-        <button onclick="returnText()" class="modalTrigger" data-target="modalActivate">Generate Image</button>
+        <button onclick="returnText()" class="modalTrigger" data-target="modalActivate">Generate Image</button><br><br>
+        <a href="./savedPosters.html" class="button">View Saved Posters</a>
     </div>
     
     <section>
@@ -50,11 +51,14 @@
                 </div>
                 <button class="modal-close is-large" aria-label="close">Close</button>
                 <footer class="modal-card-foot">
-                    <button onclick="savePoster()" class="saveButton is-success">Save</button>
+                    <button onclick="savePosters()" class="saveButton is-success">Save</button>
                   </footer>
             </div>
         </div>
     </section>
+
+
+    <section id="savedPosters"></section>
     <!-- <section class="container" id="photocontainer">
         <div class="box has-background-black">
             <figure class="image ratio">

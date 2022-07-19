@@ -24,7 +24,7 @@ generatePoster = generateBtn.addEventListener('click', function() {
           return response.json();
         })
         .then(function (data) {
-          console.log(data.quote)
+          // console.log(data.quote)
           quote = data.quote;
   
           //adding in the filter check here
@@ -57,7 +57,7 @@ generatePoster = generateBtn.addEventListener('click', function() {
     getImage(); 
 
     returnText(); 
-})
+}); 
 
   //code for the filter
   function quoteFilter(quote){
@@ -127,7 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-var titleEl;
+
+var titleEl; 
+
 
 var returnText = function(){
   
@@ -137,16 +139,18 @@ var returnText = function(){
   posterTitleEl.innerHTML = titleEl;  
 }
 
-//save to local storage 
-function savePoster(){
-  generatePoster; 
+var savedPosters = []; 
 
-  const poster = {
+//save to local storage 
+function savePosters(){
+
+  var poster = {
     quote: (quote), 
     image: (image), 
     title: (titleEl), 
-  }
-  console.log("yes"); 
-  
-  var posterSaved = window.localStorage.setItem('poster', JSON.stringify(poster)); 
+  }; 
+
+  savedPosters.push(poster); 
+
+  localStorage.setItem("local-Posters", JSON.stringify(savedPosters))
 }
