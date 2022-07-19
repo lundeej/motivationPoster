@@ -13,7 +13,7 @@ for(var i = 0; i < savedPostersLS.length; i++){
     var titleEl = savedPostersLS[i].title; 
 
     var template = `
-    <div class="poster row">
+    <div class="poster">
         <img class="image" src="${image}">
         <div id="poster-title">${titleEl}</div>
         <div class="quote">"${quote}" - Kanye West</div>
