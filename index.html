@@ -15,22 +15,48 @@
             <div class="column is-underlined is-size-2 has-text-white">
                 <h1>Kanye's Motivational Poster Generator</h1>
             </div>
-
-            <div class="box has-background-white">
-                <div class="column is-size-6 has-text-weight-light has-text-justified has-background-black has-text-white">
+            
+                <div id="main-div" class="column  is-half is-offset-one-quarter has-text-weight-light has-text-centered has-background-black has-text-white ">
+                    <img src="https://raw.githubusercontent.com/lundeej/motivationPoster/main/assets/images/silverYeezy.jpg" alt="God"> 
                     <p>You may not be a genius like Kanye West, but with this handy webtool you can channel his
                         intrinsic
-                        wisdom and instantly generate deeply moticational imagery to motivate yourself and others.
+                        wisdom and instantly generate deeply moticational imagery to inspire yourself and others.
                     </p>
                     <br>
                     <p>Simply enter an adjective or descriptive word below, and a motivational poster design will be
                         instantly generated using randomly selected contemplative photographs and a real quote from
                         Kanye West himself.</p>
                 </div>
-            </div>
+            
     </section>
     <br>
-    <section class="container" id="photocontainer">
+    
+    <div id="form-input">
+        <input id="title" type="text"/>
+        <button onclick="returnText()" class="modalTrigger" data-target="modalActivate">Generate Image</button>
+    </div>
+    
+    <section>
+        <div class="poster hide">
+            <div id="modalActivate" class="modal">
+                <div class="modal-background"> </div>
+                <div class="modal-content">
+                    <p class="image is-4by3">
+                        <img id="image">
+                        <section class="modal-card-body">
+                            <h2 id="poster-title"></h2>
+                            <h3 class="quote is-1" id="quote"></h3>
+                        </section>
+                    </p>
+                </div>
+                <button class="modal-close is-large" aria-label="close">Close</button>
+                <footer class="modal-card-foot">
+                    <button onclick="savePoster()" class="saveButton is-success">Save</button>
+                  </footer>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="container" id="photocontainer">
         <div class="box has-background-black">
             <figure class="image ratio">
                 <img id="image"></img>
@@ -49,7 +75,7 @@
                     </div>
                 </div>
             </div>
-    </section>
+    </section> -->
     <script src="./script.js"></script>
 </body>
 
