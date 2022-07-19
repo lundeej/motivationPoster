@@ -17,6 +17,7 @@ for(var i = 0; i < savedPostersLS.length; i++){
         <img class="image" src="${image}">
         <div id="poster-title">${titleEl}</div>
         <div class="quote">"${quote}" - Kanye West</div>
+
     </div>
     `;
 
