@@ -11,8 +11,6 @@
 // Optional steps to explore in the future:
 // A. User can add or remove words in the filter
 // B. Get user input on what we can replace the filtered word(s) with
-// C. Possibility of pulling data from API multiple times from the first click in order to cache "good" and expected results the first time around rather
-//    rather than running the fetching script multipule times in order to prevent overloading the API or script
 
 // More in-depth with each step
 // 1. Check whether or not to use filter
@@ -68,4 +66,15 @@ function quoteFilter(quote){
 // a. If we get to this step, no more steps necessary
 }
 
+
+// Seeing what we can do with the optional steps here
+
+// A. User can add or remove words in the filter
+// Ideas on how to add:
+//  - Textbox
+//  - Checkbox
+//      - Premade groups (Age rating filter)
+
+// Ideas on how to remove:
+//  - Checkbox (just unchecking from above)
 
