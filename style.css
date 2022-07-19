@@ -9,6 +9,10 @@
     margin-bottom: 20px;
 }
 
+.row {
+    margin: auto;
+}
+
 .modal-card-body {
     background-color: black;
     padding: 0;
