@@ -82,8 +82,7 @@ generatePoster = generateBtn.addEventListener('click', function() {
             isGood = false;
             console.log(isGood);
         }
-    }
-
+      }
     }
 
     if(isGood){
